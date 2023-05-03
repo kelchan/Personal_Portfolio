@@ -12,7 +12,7 @@ body {
 
 /* NAVBAR  */
 #navbar{
-    background-color: #72462E;
+    background-color: black;
     color: rgba(255, 255, 255, 0.596);
     display: flex;
     align-items: center;
@@ -20,12 +20,21 @@ body {
     gap: 3%;
     list-style: none;
     padding: 1.5rem;
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    transition: top 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.596)
 }
 
 /* ------------- ABOUT ----------------- */
 #about {
     min-height: 100vh;
-    background-color: #72462E;
+    background-color: rgb(71,72,72);
     color: white;
     display: flex;
     flex-direction: column;
@@ -141,4 +150,80 @@ h2 {
     0 0 400px rgb(1, 143, 143),
     0 0 500px rgb(1, 143, 143);
 }
+
 /* ------------------------------------- */
+
+#cube-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    background-color: rgb(71,72,72);
+    color: white;
+}
+
+.cube2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+    0% 
+    {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube2 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube2 div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black,aqua);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);    /* (300px width/height) / 2 = 150px */
+}
+
+.top2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: #222;
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.top2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: aqua;
+    transform: translateZ(-190px);
+    filter: blur(20px);
+    box-shadow: 0 0 60px rgb(1, 143, 143),
+    0 0 200px rgb(1, 143, 143),
+    0 0 300px rgb(1, 143, 143),
+    0 0 400px rgb(1, 143, 143),
+    0 0 500px rgb(1, 143, 143);
+}
