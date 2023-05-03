@@ -6,12 +6,11 @@
 
 body {
     min-height: 100vh;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-
 /* NAVBAR  */
-#navbar{
+#navbar {
     background-color: black;
     color: rgba(255, 255, 255, 0.596);
     display: flex;
@@ -28,13 +27,13 @@ body {
 
 a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.596)
+    color: rgba(255, 255, 255, 0.596);
 }
 
 /* ------------- ABOUT ----------------- */
 #about {
     min-height: 100vh;
-    background-color: rgb(71,72,72);
+    background-color: rgb(71, 72, 72);
     color: white;
     display: flex;
     flex-direction: column;
@@ -93,14 +92,12 @@ h2 {
     animation: animate 5s linear infinite;
 }
 
-@keyframes animate
-{
-    0% 
-    {
+@keyframes animate {
+    0% {
         transform: rotateX(-30deg) rotateY(0deg);
     }
-    100%
-    {
+
+    100% {
         transform: rotateX(-30deg) rotateY(360deg);
     }
 }
@@ -120,8 +117,9 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(black,aqua);
-    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);    /* (300px width/height) / 2 = 150px */
+    background: linear-gradient(black, aqua);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+    /* (300px width/height) / 2 = 150px */
 }
 
 .top {
@@ -135,7 +133,7 @@ h2 {
 }
 
 .top::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -144,11 +142,9 @@ h2 {
     background: aqua;
     transform: translateZ(-380px);
     filter: blur(20px);
-    box-shadow: 0 0 120px rgb(1, 143, 143),
-    0 0 200px rgb(1, 143, 143),
-    0 0 300px rgb(1, 143, 143),
-    0 0 400px rgb(1, 143, 143),
-    0 0 500px rgb(1, 143, 143);
+    box-shadow: 0 0 120px rgb(1, 143, 143), 0 0 200px rgb(1, 143, 143),
+        0 0 300px rgb(1, 143, 143), 0 0 400px rgb(1, 143, 143),
+        0 0 500px rgb(1, 143, 143);
 }
 
 /* ------------------------------------- */
@@ -158,7 +154,7 @@ h2 {
     justify-content: center;
     align-items: center;
     min-height: 20vh;
-    background-color: rgb(71,72,72);
+    background-color: rgb(71, 72, 72);
     color: white;
 }
 
@@ -170,14 +166,12 @@ h2 {
     animation: animate 5s linear infinite;
 }
 
-@keyframes animate
-{
-    0% 
-    {
+@keyframes animate {
+    0% {
         transform: rotateX(-30deg) rotateY(0deg);
     }
-    100%
-    {
+
+    100% {
         transform: rotateX(-30deg) rotateY(360deg);
     }
 }
@@ -197,8 +191,9 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(black,aqua);
-    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);    /* (300px width/height) / 2 = 150px */
+    background: linear-gradient(black, aqua);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+    /* (300px width/height) / 2 = 150px */
 }
 
 .top2 {
@@ -212,7 +207,7 @@ h2 {
 }
 
 .top2::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -221,9 +216,62 @@ h2 {
     background: aqua;
     transform: translateZ(-190px);
     filter: blur(20px);
-    box-shadow: 0 0 60px rgb(1, 143, 143),
-    0 0 200px rgb(1, 143, 143),
-    0 0 300px rgb(1, 143, 143),
-    0 0 400px rgb(1, 143, 143),
-    0 0 500px rgb(1, 143, 143);
+    box-shadow: 0 0 60px rgb(1, 143, 143), 0 0 200px rgb(1, 143, 143),
+        0 0 300px rgb(1, 143, 143), 0 0 400px rgb(1, 143, 143),
+        0 0 500px rgb(1, 143, 143);
 }
+
+/* Global */
+/* html {
+    min-height: 100%;
+    overflow: hidden;
+} */
+
+/* body {
+    height: calc(100vh - 8em);
+    padding: 4em;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Anonymous Pro", monospace;
+    background-color: rgb(25, 25, 25);
+} */
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 24em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+* { color:#fff; text-decoration: none;}
