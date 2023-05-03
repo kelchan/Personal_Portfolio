@@ -149,7 +149,7 @@ a {
 /* ---------------ABOUT------------------- */
 
 #about{
-    background-color: black;
+    background-color: rgb(39,39,39);
     color: white;
     padding: 2rem 10rem 10rem 10rem;
 }
@@ -160,13 +160,13 @@ a {
 }
 
 #aboutMe {
-    background-color: white;
+    background-color: rgb(196,196,196);
     color: black;
     margin-top: 2rem;
     padding: 5rem 5rem 5rem 5rem;
     display: flex;
     flex-direction: row;
-    
+
 }
 
 
