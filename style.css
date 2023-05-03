@@ -30,8 +30,8 @@ a {
     color: rgba(255, 255, 255, 0.596);
 }
 
-/* ------------- ABOUT ----------------- */
-#about {
+/* ------------- HOME ----------------- */
+#home {
     min-height: 100vh;
     background-color: rgb(71, 72, 72);
     color: white;
@@ -42,8 +42,12 @@ a {
     gap: 2rem;
 }
 
-#about h1 {
+#home h1 {
     font-size: 500%;
+}
+
+#home h2 {
+    font-size: 200%;
 }
 
 #triangle {
@@ -67,27 +71,20 @@ a {
 
 /* ---------------------------------------------------------------- */
 /* ---------------CUBE----------------  */
-h2 {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 12rem 5rem 0rem 5rem;
-    font-size: 5rem;
-}
 
 #cube-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: black;
+    min-height: 20vh;
+    background-color: rgb(71, 72, 72);
     color: white;
 }
 
 .cube {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     transform-style: preserve-3d;
     animation: animate 5s linear infinite;
 }
@@ -96,7 +93,7 @@ h2 {
     0% {
         transform: rotateX(-30deg) rotateY(0deg);
     }
-
+    
     100% {
         transform: rotateX(-30deg) rotateY(360deg);
     }
@@ -118,85 +115,11 @@ h2 {
     width: 100%;
     height: 100%;
     background: linear-gradient(black, aqua);
-    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
-    /* (300px width/height) / 2 = 150px */
-}
-
-.top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    background: #222;
-    transform: rotateX(90deg) translateZ(150px);
-}
-
-.top::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    background: aqua;
-    transform: translateZ(-380px);
-    filter: blur(20px);
-    box-shadow: 0 0 120px rgb(1, 143, 143), 0 0 200px rgb(1, 143, 143),
-        0 0 300px rgb(1, 143, 143), 0 0 400px rgb(1, 143, 143),
-        0 0 500px rgb(1, 143, 143);
-}
-
-/* ------------------------------------- */
-
-#cube-container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 20vh;
-    background-color: rgb(71, 72, 72);
-    color: white;
-}
-
-.cube2 {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform-style: preserve-3d;
-    animation: animate 5s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        transform: rotateX(-30deg) rotateY(0deg);
-    }
-
-    100% {
-        transform: rotateX(-30deg) rotateY(360deg);
-    }
-}
-
-.cube2 div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-}
-
-.cube2 div span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(black, aqua);
     transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
     /* (300px width/height) / 2 = 150px */
 }
 
-.top2 {
+.top {
     position: absolute;
     top: 0;
     left: 0;
@@ -206,7 +129,7 @@ h2 {
     transform: rotateX(90deg) translateZ(75px);
 }
 
-.top2::before {
+.top::before {
     content: "";
     position: absolute;
     top: 0;
@@ -217,12 +140,23 @@ h2 {
     transform: translateZ(-190px);
     filter: blur(20px);
     box-shadow: 0 0 60px rgb(1, 143, 143), 0 0 200px rgb(1, 143, 143),
-        0 0 300px rgb(1, 143, 143), 0 0 400px rgb(1, 143, 143),
-        0 0 500px rgb(1, 143, 143);
+    0 0 300px rgb(1, 143, 143), 0 0 400px rgb(1, 143, 143),
+    0 0 500px rgb(1, 143, 143);
 }
 
-body {
+/* ------------------------------------- */
+
+/* ---------------ABOUT------------------- */
+
+#about{
+    background-color: black;
+    color: white;
+}
+
+#about h1{
     text-align: center;
+    font-size: 300%;
 }
 
-* { color:#fff; text-decoration: none;}
+
+/* ------------------------------------- */
