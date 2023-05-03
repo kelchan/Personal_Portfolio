@@ -55,6 +55,7 @@ window.onload = function () {
     document.body.appendChild(css);
 };
 
+
 function addShadow(element) {
     element.classList.add('shadow');
 }

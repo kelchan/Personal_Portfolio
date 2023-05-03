@@ -151,11 +151,22 @@ a {
 #about{
     background-color: black;
     color: white;
+    padding: 2rem 10rem 10rem 10rem;
 }
 
 #about h1{
     text-align: center;
     font-size: 300%;
+}
+
+#aboutMe {
+    background-color: white;
+    color: black;
+    margin-top: 2rem;
+    padding: 5rem 5rem 5rem 5rem;
+    display: flex;
+    flex-direction: row;
+    
 }
 
 
